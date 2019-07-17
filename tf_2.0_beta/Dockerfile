@@ -1,5 +1,7 @@
 FROM nvcr.io/nvidia/cuda:10.1-runtime-ubuntu18.04
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update && \
     apt-get install -y git wget unzip sudo tmux vim-nox libopencv-dev build-essential screen python3-pip && \
     rm -rf /var/lib/apt/lists/
