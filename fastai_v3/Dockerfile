@@ -1,5 +1,7 @@
 from nvcr.io/nvidia/pytorch:19.06-py3
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update && \
     apt-get install -y git wget unzip sudo tmux vim-nox libopencv-dev build-essential screen && \
     rm -rf /var/lib/apt/lists/
