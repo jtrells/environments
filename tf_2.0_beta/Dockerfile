@@ -10,4 +10,6 @@ RUN pip install scipy
 RUN pip install scikit-learn
 RUN pip install pandas
 
-RUN pip install tensorflow-gpu==2.0.0-beta1
+RUN apt-get update
+RUN apt-get -y install python3-pip
+RUN pip3 install tensorflow-gpu==2.0.0-beta1
