@@ -16,6 +16,15 @@ RUN pip install opencv-python
 # RUN pip install notebook -- comes with tensorflow image
 RUN pip install jupyterlab
 
+RUN pip install ipywidgets
+RUN jupyter nbextension enable --py widgetsnbextension
+
+RUN pip install transformers
+RUN apt-get install graphviz
+
+git config --global user.email "jtrell2@uic.edu"
+git config --global user.name "Juan Trelles"
+
 RUN mkdir workspace
 WORKDIR /workspace
 
